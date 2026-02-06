@@ -2,7 +2,7 @@
 #Por: Taisen Romero Bañuelos.
 
 
-dataSSN <- read.csv("C:\\Users\\Tacos\\OneDrive\\Documentos\\Mis vainas\\Datos\\1 SSNMX_catalogo_PUE.csv", header=TRUE, skip=4, sep=",", fill=TRUE)
+dataSSN <- read.csv("1 SSNMX_catalogo_PUE.csv", header=TRUE, skip=4, sep=",", fill=TRUE)
 dataSSN <- dataSSN[1:(nrow(dataSSN) - 7), ]
 
 dataSSN$Magnitud[dataSSN$Magnitud == "no calculable"] <- NA
@@ -204,6 +204,7 @@ legend(
 # se ve que la mayor parte de los eventos son de magnitud menor (<4), mientras que los eventos mayores son escasos 
 # y más estables. En conjunto, el EDA sugiere que para tareas de pronóstico conviene trabajar con conteos agregados 
 # (mensuales/semanales) y/o con umbrales de magnitud (p.ej., ≥4) para reducir el impacto de cambios en detección y sesgos de reporte.
+
 
 
 
